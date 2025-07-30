@@ -19,7 +19,7 @@ useEffect(() => {
     
   <Toaster/>
   <Navbar/>
-  <div className="bg-slate-100 h-screen flex flex-col items-center p-3 pt-32 gap-16">
+  <div className="bg-slate-100 h-full flex flex-col items-center p-3 pt-32 gap-16">
     <CreateTask tasks={tasks} setTasks={setTasks} />
     <ListTasks tasks={tasks} setTasks={setTasks}/>
   </div> 
