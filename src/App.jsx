@@ -9,10 +9,11 @@ import Navbar from "./components/Navbar";
 function App() {
   const [tasks,setTasks] = useState([]);
 
-  useEffect(()=>{
-    setTasks(JSON.parse(localStorage.getItem("tasks")))
+useEffect(() => {
+  const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  setTasks(storedTasks);
+}, []);
 
-  },[])
 
   return <DndProvider backend={HTML5Backend}>
     
