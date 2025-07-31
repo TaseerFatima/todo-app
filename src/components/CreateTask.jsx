@@ -29,10 +29,10 @@ function CreateTask({ tasks, setTasks }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full items-start sm:items-center">
       <input
         type="text"
-        className="border-2 border-slate-400 bg-slate-100 rounded-md mr-4 h-12 w-64 px-1"
+        className="border-2 border-slate-400 bg-slate-100 rounded-md mr-4 h-12 sm:w-64 px-3 w-full"
         value={task.name}
         onChange={(e) =>
           setTask({ ...task, name: e.target.value }) 
@@ -40,7 +40,7 @@ function CreateTask({ tasks, setTasks }) {
       />
       <button
         type="submit"
-        className="bg-cyan-500 rounded-md text-white px-4 h-12 hover:bg-cyan-700"
+        className="bg-cyan-500 rounded-md text-white px-4 h-12 w-full sm:w-auto hover:bg-cyan-700"
       >
         Create
       </button>

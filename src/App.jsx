@@ -19,9 +19,9 @@ useEffect(() => {
     
   <Toaster/>
   <Navbar/>
-  <div className="bg-slate-100 h-full flex flex-col items-center p-3 pt-32 gap-16">
-    <CreateTask tasks={tasks} setTasks={setTasks} />
-    <ListTasks tasks={tasks} setTasks={setTasks}/>
+  <div className="bg-slate-100 min-h-screen flex flex-col items-center p-3 pt-32 gap-16">
+   <div className="w-full max-w-5xl"> <CreateTask tasks={tasks} setTasks={setTasks} /></div>
+   <div className="w-full max-w-5xl"> <ListTasks tasks={tasks} setTasks={setTasks}/></div>
   </div> 
   </DndProvider>
 }
